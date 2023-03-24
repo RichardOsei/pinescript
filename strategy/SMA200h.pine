@@ -1,0 +1,12 @@
+//@version=4
+study("200 Hour SMA", shorttitle="200H SMA", overlay=true)
+
+// Input for the source and length
+source = close
+length = input(200, minval=1, title="Length")
+
+// Calculate the 200-hour SMA
+sma200 = sma(source, length)
+
+// Plot the 200-hour SMA on the chart
+plot(sma200, title="200 Hour SMA", color=color.blue, linewidth=2)
